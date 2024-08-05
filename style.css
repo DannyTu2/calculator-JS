@@ -8,9 +8,20 @@
 
 }
 
+.display {
+    display:flex;
+    justify-content: center;
+    outline-color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
 .cell{ /* in other words column here */
     background-color: lightgrey;
     padding: 1rem 0;
     flex: 1;
+    margin:8px;
 
 }
