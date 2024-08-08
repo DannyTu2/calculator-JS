@@ -21,11 +21,33 @@ const buttons = document.querySelectorAll("button");
 // }
 
 function display(val){
-  displayArea.textContent += val;
+  return displayArea.textContent += val;
+}
+
+function clearValue() {
+  return displayArea.textContent='';
 }
 
 function operate(number1, number2, operator) {
-    add(number1, number2);
+  if(operator == "+") {
+    const resultAddition = add(number1, number2);
+    return displayArea = resultAddition;
+
+  } else if (operator =="x") {
+    const resultMulti = multiply(number1, number2)
+    return displayArea = resultMulti;
+
+  } else if (operator == "/") {
+    const resultDiv = divide(number1,number2)
+    return displayArea = resultDiv;
+
+  } else if(operator == "-") {
+    const resultSub = substract(number1, number2)
+    return displayArea = resultSub;
+  }
+
+
+
 }
 
 function add(a, b) {
@@ -36,7 +58,7 @@ function substract(a, b) {
   return a - b;
 }
 
-function multiplty(a, b) {
+function multiply(a, b) {
   return a * b;
 }
 
