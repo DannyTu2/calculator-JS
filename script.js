@@ -2,21 +2,48 @@ let number1;
 let operator;
 let number2;
 
-let displayArea = document.getElementById('result-display');
+let displayArea = document.getElementById("result-display");
 
-function display(val){
-  displayArea.textContent += val;
+function display(val) {
+  return (displayArea.textContent += val);
 }
 
-function operate(number1, number2, operator) {
-    add(number1, number2);
+function clearValue() {
+  number1 = null;
+  number2 = null;
+  operator = null;
+  return (displayArea.textContent = "");
+}
+
+function setOperator(op) {
+  number1 = parseFloat(displayArea.textContent);
+  displayArea.textContent = "";
+  return (operator = op);
+}
+
+function operateValue() {
+  let result;
+  number2 = parseFloat(displayArea.textContent);
+  if (operator === "/") {
+    result = divide(number1, number2);
+  } else if (operator === "*") {
+    result = multiplty(number1, number2);
+  } else if (operator === "+") {
+    result = add(number1, number2);
+  } else if (operator === "-") {
+    result = substract(number1, number2);
+  }
+  displayArea.textContent = result;
+  number1 = result;
+  number2 = null;
+  operator = null;
 }
 
 function add(a, b) {
   return a + b;
 }
 
-function subtract(a, b) {
+function substract(a, b) {
   return a - b;
 }
 

@@ -10,7 +10,7 @@
         <p id="result-display"> </p>
     </div>
 
-    <button clas="cell">Clear</button>
+
     <div class="container">
         <div class="row">
             <button class="cell" id="0" onclick="display(0)"> 0</button>
@@ -30,12 +30,13 @@
         </div>
         <div class="row">
             <button class="cell" id="9" onclick="display(9)"> 9</button>
-            <button class="cell" onclick="operateValue()"> =</button>
+            <button class="cell" onclick="operateValue()"> = </button>
+            <button class="cell" onclick="clearValue()">Clear</button>
         </div>
-        <button> / </button>
-        <button> - </button>
-        <button> + </button>
-        <button> x </button>
+        <button onclick="setOperator('/')"> / </button>
+        <button onclick="setOperator('-')"> - </button>
+        <button onclick="setOperator('+')"> + </button>
+        <button onclick="setOperator('*')"> x </button>
 
 
     </div>
