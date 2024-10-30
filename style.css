@@ -1,11 +1,21 @@
 .container {
-    max-width: 1200px;
+    max-width: 500px;
+    max-height: 700px;
     margin: 0 auto;
+    outline: 2px solid black; 
+}
+
+.titleCalculator {
+    font-size: medium;
 }
 
 .row {
     display: flex;
+}
 
+#result-display {
+    height:auto;
+    width:auto;
 }
 
 .display {
@@ -16,6 +26,7 @@
 
 h1 {
     text-align: center;
+    font-family: fantasy;
 }
 
 .cell{ /* in other words column here */
@@ -23,5 +34,7 @@ h1 {
     padding: 1rem 0;
     flex: 1;
     margin:8px;
+    width:70px;
+    font-weight: bold;
 
 }
